@@ -20,13 +20,16 @@ Players can log in with their name, play games, track their scores, and view the
 ---
 
 ## 📂 Project Structure  
+
+```bash
 MiniGames/
-│── app.py # Main hub (game selector + login + history)
-│── tic_tac_toe.py # Tic Tac Toe game logic
-│── number_guess.py # Number Guess game
+│── app.py                 # Main hub (game selector + login + history)
+│── tic_tac_toe.py         # Tic Tac Toe game logic
+│── number_guess.py        # Number Guess game
 │── rock_paper_scissors.py # Rock Paper Scissors game
-│── utils.py # Helper functions (history management)
-│── history.json # Player data (auto-created at runtime)
+│── utils.py               # Helper functions (history management)
+│── history.json           # Player data (auto-created at runtime)
+```
 
 ---
 
@@ -36,54 +39,48 @@ MiniGames/
 ```bash
 git clone https://github.com/xhesikamula/MiniGames.git
 cd MiniGames
+```
 
 ### 2. Create a virtual environment (recommended)
 ```bash
 python -m venv venv
 source venv/bin/activate   # On Mac/Linux
 venv\Scripts\activate      # On Windows
+```
 
 ### 3. Install dependencies
 ```bash
 pip install streamlit
+```
 
 ### 4. Run the app
 ```bash
 streamlit run app.py
+```
 
 ---
 
-## 🕹️ How to Play
-```bash
+## 🕹️ How to Play  
 
-Open the app in your browser (default: http://localhost:8501).
-
-Enter your name to start.
-
-Choose one of the games from the dropdown:
-
- - Tic Tac Toe → Click on the grid to place X or O.
-
- - Number Guess → Enter a guess (1–20).
-
- - Rock Paper Scissors → Pick Rock, Paper, or Scissors.
-
-Check your scoreboard and history at the bottom.
+1. Open the app in your browser (default: `http://localhost:8501`).  
+2. Enter your **name** to start.  
+3. Choose one of the games from the dropdown:  
+   - **Tic Tac Toe** → Click on the grid to place X or O.  
+   - **Number Guess** → Enter a guess (1–20).  
+   - **Rock Paper Scissors** → Pick Rock, Paper, or Scissors.  
+4. Check your **scoreboard** and **history** at the bottom.  
 
 ---
 
-##  Tech Stack
+## 🏗️ Tech Stack  
 
- - Python (logic)
-
- - Streamlit (UI framework)
-
- - JSON (persistent storage)
+- **Python** (logic)  
+- **Streamlit** (UI framework)  
+- **JSON** (persistent storage)  
 
 ---
 
-👨‍💻 Author
+## 👨‍💻 Author  
 
-Built by Xhesika Mula — a fun project to showcase Python, Streamlit, and interactive app development.
-
+Built by **Xhesika Mula** — a fun project to showcase Python, Streamlit, and interactive app development.  
 
