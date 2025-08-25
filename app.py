@@ -6,7 +6,7 @@ import rock_paper_scissors
 
 st.set_page_config(page_title="Mini Arcade", page_icon="🎮", layout="centered")
 
-# ---- SESSION STATE INIT ----
+# ---- SESSION STATE INIT ---
 if "player_name" not in st.session_state:
     st.session_state.player_name = None
 if "scoreboard" not in st.session_state:
