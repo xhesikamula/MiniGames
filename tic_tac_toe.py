@@ -4,6 +4,7 @@ from utils import update_score
 def play():
     st.header("❌⭕ Tic-Tac-Toe")
 
+    #it should put X/O without clicking twice tho
     if "board" not in st.session_state:
         st.session_state.board = [""] * 9
         st.session_state.turn = "X"
