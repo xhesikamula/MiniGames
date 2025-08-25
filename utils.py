@@ -12,7 +12,7 @@ def load_history():
 def save_history(data):
     with open(HISTORY_FILE, "w") as f:
         json.dump(data, f, indent=4)
-
+#design the way it shows history in a better way
 def update_score(result, game_name, details=""):
     player = st.session_state.player_name
     all_data = load_history()
