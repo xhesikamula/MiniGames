@@ -6,12 +6,6 @@ import random
 def play():
     st.header("❌⭕ Tic-Tac-Toe")
 
-    # --- Mode Selection ---
-    mode = st.radio("Choose mode:", ["2 Players", "Vs AI"])
-    difficulty = None
-    if mode == "Vs AI":
-        difficulty = st.radio("AI Difficulty:", ["Easy", "Hard"])
-
     if "board" not in st.session_state:
         st.session_state.board = [""] * 9
         st.session_state.turn = "X"

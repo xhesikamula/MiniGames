@@ -4,7 +4,7 @@ from utils import update_score
 
 def play():
     st.header("✊🖐️✌ Rock Paper Scissors")
-
+#change the design
     choices = ["Rock", "Paper", "Scissors"]
     player_choice = st.selectbox("Choose your move:", choices)
     if st.button("Play!"):

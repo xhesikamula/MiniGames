@@ -2,6 +2,7 @@ import streamlit as st
 import random
 from utils import update_score
 
+
 def play():
     st.header("🔢 Number Guess Game")
 
