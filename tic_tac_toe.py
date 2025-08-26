@@ -6,12 +6,21 @@ import random
 def play():
     st.header("❌⭕ Tic-Tac-Toe")
 
+    # --- Choose mode ---
+    mode = st.radio("Game Mode:", ["2 Players", "Vs AI"], horizontal=True)
+
+    difficulty = None
+    if mode == "Vs AI":
+        difficulty = st.radio("AI Difficulty:", ["Easy", "Hard"], horizontal=True)
+
+    # --- Init state ---
     if "board" not in st.session_state:
         st.session_state.board = [""] * 9
         st.session_state.turn = "X"
     if "last_click" not in st.session_state:
         st.session_state.last_click = None
 
+    # --- Check winner ---
     def check_winner(board):
         wins = [(0,1,2),(3,4,5),(6,7,8),
                 (0,3,6),(1,4,7),(2,5,8),
@@ -51,7 +60,7 @@ def play():
     def ai_move(board, difficulty):
         if difficulty == "Easy":
             return random.choice(available_moves(board))
-        else:
+        else:  # Hard
             best_score = -math.inf
             best_move = None
             for move in available_moves(board):
@@ -68,25 +77,25 @@ def play():
     for i in range(3):
         for j in range(3):
             idx = 3*i+j
-            if cols[j].button(st.session_state.board[idx] or "-", key=f"ttt{idx}"):
-                st.session_state.last_click = idx  # record the move
+            if cols[j].button(st.session_state.board[idx] or " ", key=f"ttt{idx}"):
+                st.session_state.last_click = idx
 
-    # --- Process the click AFTER UI draw ---
+    # --- Process click ---
     if st.session_state.last_click is not None:
         idx = st.session_state.last_click
         if not st.session_state.board[idx] and not check_winner(st.session_state.board):
             st.session_state.board[idx] = st.session_state.turn
             st.session_state.turn = "O" if st.session_state.turn == "X" else "X"
 
-            # AI plays right after player move
+            # If playing vs AI -> AI responds immediately
             if mode == "Vs AI" and st.session_state.turn == "O" and not check_winner(st.session_state.board):
                 ai_idx = ai_move(st.session_state.board, difficulty)
                 st.session_state.board[ai_idx] = "O"
                 st.session_state.turn = "X"
 
-        st.session_state.last_click = None  # reset click
+        st.session_state.last_click = None
 
-    # --- Check game state ---
+    # --- Check game result ---
     winner = check_winner(st.session_state.board)
     if winner:
         st.success(f"🎉 Player {winner} wins!")

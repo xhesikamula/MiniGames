@@ -1,0 +1,48 @@
+{
+    "Xhesi": {
+        "scoreboard": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 1
+        },
+        "history": [
+            {
+                "game": "Rock Paper Scissors",
+                "outcome": "\ud83e\udd1d Draw",
+                "details": "AI: Paper"
+            }
+        ]
+    },
+    "xhesi": {
+        "scoreboard": {
+            "wins": 2,
+            "losses": 0,
+            "draws": 1
+        },
+        "history": [
+            {
+                "game": "Number Guess",
+                "outcome": "\u2705 Win",
+                "details": "Guessed 2"
+            },
+            {
+                "game": "Tic Tac Toe",
+                "outcome": "\ud83e\udd1d Draw",
+                "details": "Full board draw (Vs AI, Hard)"
+            },
+            {
+                "game": "Tic Tac Toe",
+                "outcome": "\u2705 Win",
+                "details": "Winner: O (2 Players, N/A)"
+            }
+        ]
+    },
+    "xhes": {
+        "scoreboard": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        },
+        "history": []
+    }
+}
