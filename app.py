@@ -14,7 +14,6 @@ if "scoreboard" not in st.session_state:
 if "history" not in st.session_state:
     st.session_state.history = []
 
-st.title("🎮 Mini Arcade")
 st.subheader("Welcome to the Mini Arcade!")
 
 # ---- PLAYER LOGIN ----
