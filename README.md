@@ -9,8 +9,8 @@ Players can log in with their name, play games, track their scores, and view the
 
 - 📝 **Player Login** → Enter your name and start playing.  
 - 🎲 **3 Classic Games**:  
-  - ❌⭕ **Tic-Tac-Toe** (Player vs Player on the same board)  
-  - 🔢 **Number Guess** (Guess a number between 1–20)  
+  - ❌⭕ **Tic-Tac-Toe** (Player vs Player on the same board or Player vs AI)  
+  - 🔢 **Number Guess** (Guess a number between 1–20 or other numbers for other levels)  
   - ✊🖐️✌ **Rock, Paper, Scissors** (vs AI)  
 - 🏆 **Scoreboard** → Tracks wins, losses, and draws.  
 - 📜 **Game History** → Shows your last 10 game results.  
@@ -66,7 +66,7 @@ streamlit run app.py
 2. Enter your **name** to start.  
 3. Choose one of the games from the dropdown:  
    - **Tic Tac Toe** → Click on the grid to place X or O.  
-   - **Number Guess** → Enter a guess (1–20).  
+   - **Number Guess** → Enter a guess.  
    - **Rock Paper Scissors** → Pick Rock, Paper, or Scissors.  
 4. Check your **scoreboard** and **history** at the bottom.  
 
